@@ -33,5 +33,16 @@ namespace ConferenceApp.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        [HttpGet]
+        public IActionResult RegisterForm()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult RegisterForm(Invites response)
+        {
+            return View(response);
+        }
     }
 }
