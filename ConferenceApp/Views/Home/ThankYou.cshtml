@@ -1,0 +1,24 @@
+﻿@model Invites
+@{
+    ViewData["Title"] = "ThankYou";
+}
+
+<h1>ThankYou</h1>
+
+@if (@Model.WillJoin == true)
+{
+<div class="text-center">
+    Congratulation - @Model.Name,
+    <p>We look farward to see you at the event.</p>
+    <p>Please join 10 minutes early.</p>
+    <p>Hope you enjoy it :)</p>
+</div>
+}
+else
+{
+    <h3>Sorry to hear you will not participate, but thanks for letting us know :)</h3>
+}
+<div>
+    Click <a asp-action="ListResponses">here</a>to see who is coming
+</div>
+

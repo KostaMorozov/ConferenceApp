@@ -42,7 +42,21 @@ namespace ConferenceApp.Controllers
         [HttpPost]
         public IActionResult RegisterForm(Invites response)
         {
-            return View(response);
+            if (ModelState.IsValid)
+            {
+                Repository.AddResponse(response);
+                return View("ThankYou", response);
+            }
+            else
+            {
+                return View();
+                
+            }
+        }
+
+        public IActionResult ListResponses()
+        {
+            return View();
         }
     }
 }
