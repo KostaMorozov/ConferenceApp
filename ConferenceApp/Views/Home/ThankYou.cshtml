@@ -8,7 +8,7 @@
 @if (@Model.WillJoin == true)
 {
 <div class="text-center">
-    Congratulation - @Model.Name,
+    <h2>Congratulation - @Model.Name,</h2>
     <p>We look farward to see you at the event.</p>
     <p>Please join 10 minutes early.</p>
     <p>Hope you enjoy it :)</p>
@@ -19,6 +19,6 @@ else
     <h3>Sorry to hear you will not participate, but thanks for letting us know :)</h3>
 }
 <div>
-    Click <a asp-action="ListResponses">here</a>to see who is coming
+    Click <a asp-action="ListResponses"> here</a> to see who is coming
 </div>
 

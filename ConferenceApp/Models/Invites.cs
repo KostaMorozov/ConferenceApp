@@ -8,12 +8,12 @@ namespace ConferenceApp.Models
 {
     public class Invites
     {
-        [Required(ErrorMessage = "Please enter name...")]
+        [Required(ErrorMessage = "Please enter name")]
         public string Name { get; set; }
-        [Required(ErrorMessage = "Please enter email...")]
+        [Required(ErrorMessage = "Please enter email")]
         [EmailAddress]
         public string Email { get; set; }
-        [Required(ErrorMessage = "Please enter phone number...")]
+        [Required(ErrorMessage = "Please enter phone number")]
         public string Phone { get; set; }
         [Required(ErrorMessage = "Please specify whether you will join")]
         public bool? WillJoin { get; set; }

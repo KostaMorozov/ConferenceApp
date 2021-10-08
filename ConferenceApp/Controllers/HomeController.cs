@@ -56,7 +56,7 @@ namespace ConferenceApp.Controllers
 
         public IActionResult ListResponses()
         {
-            return View();
+            return View(Repository.Responses.Where(r => r.WillJoin == true));
         }
     }
 }
